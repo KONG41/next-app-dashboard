@@ -6,16 +6,11 @@ const secret = process.env.SECRET;
 
 export default async function handler(req, res) {
   const { username, password } = req.body;
-  // const users = await prisma.auth.findMany(
-  //   {
-  //     where: {
-  //       user: username
-  //     }
-  //   }
-  // )
-  // res.status(200).json(users)
+  const users = await prisma.auth.findMany({ where: { user: username } })
+  const user = users.map(item => item.user)
+  const pwd = users.map(item => item.password)
 
-  if (username === "admin" && password === "123") {
+  if (username === user.toString() && password === pwd.toString()) {
     const token = sign(
       {
         exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30, // 30 days

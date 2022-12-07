@@ -12,8 +12,11 @@ export default function Layout({ children, title }) {
     <section className="dash-container">
       <section className="left-nav">
         <ul>
+          <li className="top-title">
+            <Link href="/dashboard" >Dashboard</Link>
+          </li>
           <li>
-            <Link href="/dashboard/contact" > Contact</Link>
+            <Link href="/dashboard/contact" >Contact</Link>
           </li>
           <li>
             <Link href="/dashboard/account" >Account</Link>
