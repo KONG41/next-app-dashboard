@@ -1,0 +1,24 @@
+{
+  "name": "next-app-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.7.0",
+    "cookie": "^0.5.0",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.5",
+    "jsonwebtoken": "^8.5.1",
+    "next": "^12.0.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "prisma": "^4.7.0"
+  }
+}
